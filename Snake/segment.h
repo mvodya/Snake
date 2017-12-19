@@ -3,12 +3,12 @@
 #include <windows.h>
 
 // Кусок хвоста змеи (сектор)
-class Sector {
+class Segment {
 private:
 	int x_;
 	int y_;
 public:
-	Sector(int x, int y);
-	~Sector();
+	Segment(int x, int y);
+	~Segment();
 	void print(bool display);
 };

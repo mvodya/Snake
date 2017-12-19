@@ -1,19 +1,19 @@
-﻿#include "sector.h"
+﻿#include "segment.h"
 
 // Конструктор сектора хвоста змеи
-Sector::Sector(int x, int y) {
+Segment::Segment(int x, int y) {
 	x_ = x;
 	y_ = y;
 	print(true);
 }
 
 // Деструктор сектора хвоста змеи
-Sector::~Sector() {
+Segment::~Segment() {
 	print(false);
 }
 
 // Отображает сектор хвоста
-void Sector::print(bool display) {
+void Segment::print(bool display) {
 	COORD Coord;
 	Coord.X = x_;
 	Coord.Y = y_;

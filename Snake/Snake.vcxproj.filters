@@ -21,7 +21,7 @@
     <ClCompile Include="snake.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="sector.cpp">
+    <ClCompile Include="segment.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClInclude Include="snake.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sector.h">
+    <ClInclude Include="segment.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

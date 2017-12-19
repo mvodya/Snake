@@ -1,11 +1,11 @@
 ﻿#pragma once
 #include <deque>
-#include "sector.h"
+#include "segment.h"
 
 class Snake {
 private:
 	int direction_; // Направление движения
-	std::deque<Sector> sectors_; // Стек секторов хвоста
+	std::deque<Segment> sectors_; // Стек секторов хвоста
 public:
 	Snake();
 	void update();
