@@ -14,5 +14,12 @@ Sector::~Sector() {
 
 // Отображает сектор хвоста
 void Sector::print(bool display) {
-
+	COORD Coord;
+	Coord.X = x_;
+	Coord.Y = y_;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Coord);
+	if (display)
+		std::cout << " ";
+	else
+		std::cout << "0";
 }

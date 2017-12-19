@@ -1,4 +1,6 @@
 ﻿#pragma once
+#include <iostream>
+#include <windows.h>
 
 // Кусок хвоста змеи (сектор)
 class Sector {
