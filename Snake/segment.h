@@ -2,7 +2,7 @@
 #include <iostream>
 #include <windows.h>
 
-// Кусок хвоста змеи (сектор)
+// Кусок хвоста змеи (сегмент)
 class Segment {
 private:
 	int x_;
