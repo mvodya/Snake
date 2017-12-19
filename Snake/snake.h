@@ -4,7 +4,9 @@
 
 class Snake {
 private:
-	int _direction; // Направление движения
-	std::deque<Sector> _sectors; // Стек секторов хвоста
+	int direction_; // Направление движения
+	std::deque<Sector> sectors_; // Стек секторов хвоста
 public:
+	Snake();
+	void update();
 };

@@ -7,6 +7,7 @@ Snake *snake;
 
 // Основной игровой цикл
 void gameLoop() {
+	snake->update();
 }
 
 int main() {
