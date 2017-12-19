@@ -1,8 +1,6 @@
 ﻿#pragma once
 #include <deque>
-
-// Кусок хвоста
-struct Sector { int x, y; };
+#include "sector.h"
 
 class Snake {
 private:
