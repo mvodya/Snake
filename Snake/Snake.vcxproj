@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{517575D0-767B-4E36-B185-65AA7D18FC63}</ProjectGuid>
+    <ProjectGuid>{87704381-7F84-4F7E-8EFF-F5F46400DE0D}</ProjectGuid>
     <RootNamespace>Snake</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
