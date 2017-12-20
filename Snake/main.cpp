@@ -2,11 +2,12 @@
 #include <chrono>
 #include <thread>
 #include "snake.h"
-
+#include "controller.h"
 Snake *snake;
 
 // Основной игровой цикл
 void gameLoop() {
+	Controller::controlDirection(snake);
 	snake->update();
 }
 
