@@ -7,11 +7,6 @@ Segment::Segment(int x, int y) {
 	print(true);
 }
 
-// Деструктор сегмента хвоста змеи
-Segment::~Segment() {
-	print(false);
-}
-
 // Отображает сегмент хвоста
 void Segment::print(bool display) {
 	COORD Coord;
@@ -19,7 +14,7 @@ void Segment::print(bool display) {
 	Coord.Y = y_;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Coord);
 	if (display)
-		std::cout << " ";
-	else
 		std::cout << "0";
+	else
+		std::cout << " ";
 }

@@ -9,6 +9,5 @@ private:
 	int y_;
 public:
 	Segment(int x, int y);
-	~Segment();
 	void print(bool display);
 };
