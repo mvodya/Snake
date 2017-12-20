@@ -46,6 +46,7 @@ void Snake::moveHead() {
 		break;
 	case 3: // Влево
 		headX_--;
+		break;
 	case 4: // Вниз
 		headY_++;
 	default:
