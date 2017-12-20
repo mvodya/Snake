@@ -6,6 +6,7 @@ Snake::Snake() {
 	headX_ = 1;
 	headY_ = 1;
 	direction_ = 1;
+	maxTailSize_ = 10;
 	// добавляем первый сегмент
 	sectors_.push_back(Segment(headX_, headY_));
 	
@@ -13,25 +14,38 @@ Snake::Snake() {
 
 // Обновление змеи
 void Snake::update() {
+	// Перемещаем голову
 	moveHead();
+	// Добавляем новый сегмент на место головы
 	sectors_.push_back(Segment(headX_, headY_));
-	sectors_.front().print(false);
-	sectors_.pop_front();
+	// Обрезка хвоста
+	tailLimiter();
 }
 
-// Движение змеи
+// Удаляет сегменты на конце хвоста
+void Snake::tailLimiter() {
+	// Если достигли предела
+	if (sectors_.size() > maxTailSize_) {
+		// Убираем символ в консоли
+		sectors_.front().print(false);
+		// Убираем их стека
+		sectors_.pop_front();
+	}
+}
+
+// Движение змеи (изменение положения головы)
 void Snake::moveHead() {
 	switch (direction_)
 	{
-	case 1:
+	case 1: // Вправо
 		headX_++;
 		break;
-	case 2:
+	case 2: // Вверх
 		headY_--;
 		break;
-	case 3:
+	case 3: // Влево
 		headX_--;
-	case 4:
+	case 4: // Вниз
 		headY_++;
 	default:
 		break;
