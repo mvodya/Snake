@@ -6,7 +6,8 @@ Snake::Snake() {
 	headX_ = 1;
 	headY_ = 1;
 	direction_ = 1;
-	maxTailSize_ = 10;
+	maxTailSize_ = 100;
+	dead_ = false;
 	// добавляем первый сегмент
 	sectors_.push_back(Segment(headX_, headY_));
 	
@@ -14,12 +15,18 @@ Snake::Snake() {
 
 // Обновление змеи
 void Snake::update() {
-	// Перемещаем голову
-	moveHead();
-	// Добавляем новый сегмент на место головы
-	sectors_.push_back(Segment(headX_, headY_));
-	// Обрезка хвоста
-	tailLimiter();
+	if (isAlive()) {
+		// Перемещаем голову
+		moveHead();
+		// Добавляем новый сегмент на место головы
+		sectors_.push_back(Segment(headX_, headY_));
+		// Обрезка хвоста
+		tailLimiter();
+		// Проверка на пересечение с хвостом
+		if (isTailOverlap()) {
+			dead_ = true;
+		}
+	}
 }
 
 // Удаляет сегменты на конце хвоста
@@ -57,4 +64,18 @@ void Snake::moveHead() {
 // Указывает направление
 void Snake::setDirection(int direction) {
 	direction_ = direction;
+}
+
+// Проверка на пересечение с хвостом
+bool Snake::isTailOverlap() {
+	// Берем первый (последний в стеке) сегмент
+	Segment *head = &sectors_.back();
+
+	// Перебираем все сегменты, кроме головы (последняя в стеке)
+	for (size_t i = 0; i < sectors_.size() - 1; i++)
+	{
+		//if (sectors_[i].) TODO
+	}
+
+	return false;
 }

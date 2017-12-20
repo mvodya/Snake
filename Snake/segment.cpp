@@ -4,6 +4,7 @@
 Segment::Segment(int x, int y) {
 	x_ = x;
 	y_ = y;
+	// Сразу отображаем сегмент
 	print(true);
 }
 

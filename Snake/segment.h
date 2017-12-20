@@ -5,7 +5,7 @@
 // Кусок хвоста змеи (сегмент)
 class Segment {
 private:
-	int x_;
+	int x_; // Позиция сегмента
 	int y_;
 public:
 	Segment(int x, int y);

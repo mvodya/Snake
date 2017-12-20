@@ -3,17 +3,19 @@
 #include <thread>
 #include "snake.h"
 #include "controller.h"
+
 Snake *snake;
 
 // Основной игровой цикл
 void gameLoop() {
+	// Управление направлением змейки
 	Controller::controlDirection(snake);
+	// Обновление змейки
 	snake->update();
 }
 
 int main() {
 	snake = new Snake();
-
 	while (true)
 	{
 		gameLoop(); // Запускаем игровой цикл
