@@ -35,6 +35,7 @@ void Snake::tailLimiter() {
 
 // Движение змеи (изменение положения головы)
 void Snake::moveHead() {
+	// В зависимости от направления
 	switch (direction_)
 	{
 	case 1: // Вправо
@@ -50,4 +51,9 @@ void Snake::moveHead() {
 	default:
 		break;
 	}
+}
+
+// Указывает направление
+void Snake::setDirection(int direction) {
+	direction_ = direction;
 }

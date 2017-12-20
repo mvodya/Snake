@@ -14,4 +14,5 @@ public:
 	void update();
 	void tailLimiter();
 	void moveHead();
+	void setDirection(int direction);
 };
