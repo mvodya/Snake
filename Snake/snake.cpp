@@ -74,7 +74,9 @@ bool Snake::isTailOverlap() {
 	// Перебираем все сегменты, кроме головы (последняя в стеке)
 	for (size_t i = 0; i < sectors_.size() - 1; i++)
 	{
-		//if (sectors_[i].) TODO
+		// Проверяем на совпадение координат
+		if (sectors_[i].getX() == head->getX() && sectors_[i].getY() == head->getY())
+			return true;
 	}
 
 	return false;
