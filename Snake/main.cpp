@@ -16,6 +16,7 @@ void gameLoop() {
 
 int main() {
 	snake = new Snake();
+	Controller::drawBorder();
 	while (true)
 	{
 		gameLoop(); // Запускаем игровой цикл
