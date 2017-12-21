@@ -25,6 +25,7 @@ void Snake::update() {
 		// Проверка на пересечение с хвостом
 		if (isTailOverlap()) {
 			dead_ = true;
+			sectors_.back().printKill();
 		}
 	}
 }

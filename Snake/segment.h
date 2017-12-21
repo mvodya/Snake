@@ -10,6 +10,7 @@ private:
 public:
 	Segment(int x, int y);
 	void print(bool display);
+	void printKill();
 	int getX() { return x_; };
 	int getY() { return y_; };
 };
