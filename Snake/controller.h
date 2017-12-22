@@ -1,8 +1,6 @@
 ﻿#pragma once
 #include "snake.h"
-
-const int SIZE_BORDER_X = 100;
-const int SIZE_BORDER_Y = 25;
+#include "vars.h"
 
 namespace Controller {
 	// Управление направлением змейки с клавиатуры

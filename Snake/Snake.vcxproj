@@ -120,6 +120,7 @@
     <ClInclude Include="controller.h" />
     <ClInclude Include="segment.h" />
     <ClInclude Include="snake.h" />
+    <ClInclude Include="vars.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
