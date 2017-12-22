@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <deque>
 #include "segment.h"
+#include "vars.h"
 
 class Snake {
 private:
@@ -17,7 +18,7 @@ public:
 	void moveHead();
 	void setDirection(int direction);
 	bool isTailOverlap();
-	bool isBorderOverlap();
+	void BorderOverlap();
 	
 	bool isAlive() { return !dead_; };
 };

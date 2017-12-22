@@ -18,6 +18,8 @@ void Snake::update() {
 	if (isAlive()) {
 		// Перемещаем голову
 		moveHead();
+		// Пересечения с границей карты
+		BorderOverlap();
 		// Добавляем новый сегмент на место головы
 		sectors_.push_back(Segment(headX_, headY_));
 		// Обрезка хвоста
@@ -81,4 +83,20 @@ bool Snake::isTailOverlap() {
 	}
 
 	return false;
+}
+
+// Пересечения с границей карты
+void Snake::BorderOverlap() {
+	if (headX_ >= SIZE_BORDER_X - 1) {
+		headX_ = 1;
+	}
+	if (headX_ <= 0) {
+		headX_ = SIZE_BORDER_X - 2;
+	}
+	if (headY_ >= SIZE_BORDER_Y) {
+		headY_ = 1;
+	}
+	if (headY_ <= 0) {
+		headY_ = SIZE_BORDER_Y - 1;
+	}
 }
