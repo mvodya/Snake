@@ -3,6 +3,7 @@
 #include "segment.h"
 #include "vars.h"
 
+// Змея
 class Snake {
 private:
 	int direction_; // Направление движения
@@ -19,6 +20,9 @@ public:
 	void setDirection(int direction);
 	bool isTailOverlap();
 	void BorderOverlap();
-	
+	void growUp() { maxTailSize_++; };
+
 	bool isAlive() { return !dead_; };
+	int getX() { return headX_; };
+	int getY() { return headY_; };
 };

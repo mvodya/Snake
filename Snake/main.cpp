@@ -3,8 +3,10 @@
 #include <thread>
 #include "snake.h"
 #include "controller.h"
+#include "food.h"
 
 Snake *snake;
+Food *food;
 
 // Основной игровой цикл
 void gameLoop() {
@@ -12,10 +14,13 @@ void gameLoop() {
 	Controller::controlDirection(snake);
 	// Обновление змейки
 	snake->update();
+	// Проверка хавчика
+	food->test(snake);
 }
 
 int main() {
 	snake = new Snake();
+	food = new Food();
 	Controller::drawBorder();
 	while (true)
 	{
