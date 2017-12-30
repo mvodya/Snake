@@ -12,17 +12,18 @@ private:
 	int maxTailSize_; // Максимальная длинна хвоста
 	bool dead_; // Змейка мертва?
 	std::deque<Segment> sectors_; // Стек сегментов хвоста
+	void tailLimiter();
+	void moveHead();
+	bool isTailOverlap();
+	void BorderOverlap();
 public:
 	Snake();
 	void update();
-	void tailLimiter();
-	void moveHead();
 	void setDirection(int direction);
-	bool isTailOverlap();
-	void BorderOverlap();
-	void growUp() { maxTailSize_++; };
+	void growUp() { maxTailSize_+=2; };
 
 	bool isAlive() { return !dead_; };
+
 	int getX() { return headX_; };
 	int getY() { return headY_; };
 };
