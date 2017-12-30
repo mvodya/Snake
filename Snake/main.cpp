@@ -16,6 +16,8 @@ void gameLoop() {
 	snake->update();
 	// Проверка хавчика
 	food->test(snake);
+	// Перевод курсора на край экран
+	Controller::cursorEnd();
 }
 
 int main() {

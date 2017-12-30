@@ -61,3 +61,12 @@ void Controller::drawBorder() {
 		std::cout << "|";
 	}
 }
+
+// Перевод курсора на край экран
+void Controller::cursorEnd() {
+	// Указываем положение курсора
+	COORD Coord;
+	Coord.X = SIZE_BORDER_X;
+	Coord.Y = SIZE_BORDER_Y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Coord);
+}

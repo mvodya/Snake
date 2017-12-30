@@ -7,4 +7,6 @@ namespace Controller {
 	void controlDirection(Snake *snake);
 	// Отрисовка граней карты
 	void drawBorder();
+	// Перевод курсора на край экрана
+	void cursorEnd();
 }
