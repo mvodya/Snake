@@ -6,7 +6,7 @@ Snake::Snake() {
 	headX_ = 1;
 	headY_ = 1;
 	direction_ = 1;
-	maxTailSize_ = 1;
+	maxTailSize_ = START_TAIL_SIZE;
 	dead_ = false;
 	// добавляем первый сегмент
 	sectors_.push_back(Segment(headX_, headY_));
